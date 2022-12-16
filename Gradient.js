@@ -325,7 +325,7 @@ function normalizeColor(hexCode) {
         this.conf = {
             presetName: "",
             wireframe: false,
-            density: [.06, .16],
+            density: [.01, .90],
             zoom: 1,
             rotation: 0,
             playing: true
@@ -384,23 +384,23 @@ function normalizeColor(hexCode) {
                         value: Math.sin(this.angle) / Math.cos(this.angle)
                     }),
                     offsetTop: new this.minigl.Uniform({
-                        value: -.5
+                        value: 1
                     }),
                     offsetBottom: new this.minigl.Uniform({
-                        value: -.5
+                        value: 1
                     }),
                     noiseFreq: new this.minigl.Uniform({
-                        value: [3, 4],
+                        value: [1,1],
                         type: "vec2"
                     }),
                     noiseAmp: new this.minigl.Uniform({
                         value: this.amp
                     }),
                     noiseSpeed: new this.minigl.Uniform({
-                        value: 10
+                        value: 1
                     }),
                     noiseFlow: new this.minigl.Uniform({
-                        value: 3
+                        value: 1
                     }),
                     noiseSeed: new this.minigl.Uniform({
                         value: this.seed
